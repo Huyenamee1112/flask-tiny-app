@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/todo/css/add_task.css' %}">
+<div class="box">
+    <h2>Add Task</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="inputBox">
+            <label>Task Title</label>
+            <input type="text" name="task" required="">
+        </div>
+        <div class="inputBox">
+            <label>Description</label>
+            <textarea name="description" rows="4" cols="50"></textarea>
+        </div>
+        <input type="submit" name="submit" value="Add">
+    </form>
+    <a href="{% url 'task_list' %}">Back</a>
+</div>
+{% endblock %}

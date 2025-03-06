@@ -1,0 +1,176 @@
+/* 🌸 Nền ngoài  */
+body {
+    background-color: #ffffff;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 🎀 Phần khung chính của To-Do List  */
+.box {
+    position: relative;
+    width: 450px;
+    height: 550px;
+    border-radius: 30px;
+    background: #f6cada; 
+    padding: 30px 50px;
+    box-shadow: 25px 25px 75px rgba(251, 14, 164, 0.25), 
+    10px 10px 70px rgba(248, 2, 162, 0.25),
+    inset 5px 5px 10px rgba(79, 1, 41, 0.5),
+    inset 5px 5px 20px rgba(154, 2, 83, 0.25),
+    inset -5px -5px 15px rgba(118, 4, 38, 0.75);
+}
+
+/* 🎀 Tiêu đề với màu hồng đậm */
+h2 {
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    color: #ec1b84; 
+    font-size: 1.75em;
+    margin-bottom: 20px;
+}
+
+/* 🎀 Nút thêm công việc  */
+#addBtn {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f25a94; 
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(239, 129, 197, 0.5),
+    inset -3px -3px 5px rgba(238, 108, 193, 0.5);
+}
+
+/* 🎀 Khung tìm kiếm */
+#searchBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 🎀 Màu nền input tìm kiếm */
+#inputBx {
+    position: relative;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    box-shadow: 5px 5px 7px rgba(236, 127, 174, 0.25),
+    inset 2px 2px 5px rgba(235, 106, 188, 0.5),
+    inset -3px -3px 5px rgba(219, 116, 142, 0.5);
+}
+
+/* 🎀 Nút tìm kiếm */
+#searchBx {
+    position: absolute;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background: #f25a94; 
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 7px rgba(200, 72, 147, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 🎀 Danh sách công việc */
+.box li {
+    position: relative;
+    width: calc(100% - 95px);
+    display: flex;
+    align-items: center;
+    background: #f3adc7; 
+    margin: 15px 0;
+    padding: 10px 10px 10px 45px;
+    min-height: 45px;
+    cursor: pointer;
+    border-radius: 22.5px;
+    color: #fff;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 🎀 Công việc đã hoàn thành */
+.box li.completed {
+    content: '';
+    width: calc(100% - 95px);
+    height: 20px;
+    display: flex;
+    align-items: center;
+    background: #fa6ca5; 
+    margin: 15px 0;
+    padding: 10px 10px 10px 45px;
+    min-height: 45px;
+    cursor: pointer;
+    border-radius: 22.5px;
+    color: #fff;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 🎀 Các nút  */
+.box li .btns button {
+    position: relative;
+    right: -50px;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 5px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 🎀 Các nút khi hover  */
+.box li .btns button:hover {
+    background: #e71976;
+    color: #fff;
+}
+
+/* 🎀 Phần hiển thị danh sách công việc */
+#list {
+    position: relative;
+    margin-top: 20px;
+    height: 350px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+#list::-webkit-scrollbar {
+    width: 10px;
+}
+
+#list::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10px;
+}
+
+#list::-webkit-scrollbar-track {
+    background: #f85d99; 
+    border-radius: 10px;
+}

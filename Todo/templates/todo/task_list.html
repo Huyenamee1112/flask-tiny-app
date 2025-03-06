@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/todo/css/task_list.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<div class="box">
+    <h2>To Do List</h2>
+    <div id="addBx">
+        <button id="addBtn" onclick="window.location.href='{% url 'add_task' %}'">ADD</button>
+    </div>
+    <div id="searchBox">
+        <input type="text" name="task" id="inputBx" placeholder="Write here..." required>
+        <button type="submit" id="searchBx">search</button>
+    </div>
+    <ul id="list">
+        {% for task in tasks %}
+        <li data-task-id="{{ task.id }}" data-complete="{{ task.complete }}" class="task {% if task.complete == 1 %}completed{% endif %}">
+            {{ task.title }}
+            <div class="btns">
+                <button class="completeBtn" onclick="window.location.href='{% url 'complete_task' task.id %}'"><i class="fas fa-check"></i></button>
+                <button class="editBtn" onclick="window.location.href='{% url 'edit_task' task.id %}'"><i class="fas fa-edit"></i></button>
+                <button class="deleteBtn" onclick="window.location.href='{% url 'delete_task' task.id %}'"><i class="fas fa-times"></i></button>
+            </div>
+        </li>
+        {% endfor %}
+</div>
+<script src="{% static '/todo/js/task_list.js' %}"></script>
+{% endblock %}

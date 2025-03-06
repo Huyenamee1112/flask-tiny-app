@@ -1,0 +1,106 @@
+/* 🌸 Thiết lập chung */
+body {
+    background-color: #fce4ec;  /* Hồng pastel nhẹ */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #d81b60;
+}
+
+/* 🎀 Tiêu đề */
+header {
+    position: relative;
+    padding: 20px;
+    background: #f6cada;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f33092;
+    margin: 0;
+    padding-top: 10px;
+}
+
+body {
+    background-color: #f7bdee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 🎀 Phần khung chính của To-Do List - Hồng đậm trắng */
+.outer-container {
+    background: linear-gradient(135deg, #f77aaa, #f7f3f5); /* Hồng đậm - Trắng */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 450px;
+    height: auto;
+
+    /* 📌 Căn giữa tuyệt đối */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ✏️ Input */
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ef659a;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+
+/* ➕ Nút "Add" */
+button {
+    background: #e572b7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #f399d2;
+}
+
+/* ✅ Danh sách công việc */
+.task {
+    background: #ea86c3;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 🏷️ Nút icon */
+.task button {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fa4093;
+}
+
+.task button:hover {
+    color: #f087bf;
+}
