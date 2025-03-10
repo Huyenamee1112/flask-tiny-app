@@ -3,6 +3,13 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static '/todo/css/task_list.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<!-- 🔹 Thanh Navbar -->
+<div class="navbar">
+    <span class="username">👤 {{ user.username }}</span>
+    <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+</div>
+
 <div class="box">
     <h2>To Do List</h2>
     <div id="addBx">
@@ -23,6 +30,8 @@
             </div>
         </li>
         {% endfor %}
+    </ul>
 </div>
+
 <script src="{% static '/todo/js/task_list.js' %}"></script>
 {% endblock %}

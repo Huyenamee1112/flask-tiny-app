@@ -95,62 +95,74 @@ h2 {
 /* 🎀 Danh sách công việc */
 .box li {
     position: relative;
-    width: calc(100% - 95px);
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Căn các phần tử cách đều */
     background: #f3adc7; 
     margin: 15px 0;
-    padding: 10px 10px 10px 45px;
-    min-height: 45px;
-    cursor: pointer;
+    padding: 10px 20px;
+    min-height: 50px;
     border-radius: 22.5px;
     color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
-    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
-    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+        inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+        inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* 🎀 Công việc đã hoàn thành */
 .box li.completed {
-    content: '';
-    width: calc(100% - 95px);
-    height: 20px;
-    display: flex;
-    align-items: center;
-    background: #fa6ca5; 
-    margin: 15px 0;
-    padding: 10px 10px 10px 45px;
-    min-height: 45px;
-    cursor: pointer;
-    border-radius: 22.5px;
-    color: #fff;
-    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
-    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
-    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    background: #fa6ca5;
+    text-decoration: line-through;
 }
 
-/* 🎀 Các nút  */
+/* 🎀 Các nút trong danh sách */
+.box li .btns {
+    display: flex;
+    gap: 10px; /* Giãn khoảng cách giữa các nút */
+}
+
 .box li .btns button {
-    position: relative;
-    right: -50px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     background: #ffffff;
     border: none;
     outline: none;
     cursor: pointer;
     border-radius: 50%;
-    margin: 0 5px;
-    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
-    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
-    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    transition: 0.3s;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+        inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* 🎀 Các nút khi hover  */
-.box li .btns button:hover {
-    background: #e71976;
-    color: #fff;
+/* 🎀 Màu sắc riêng cho từng nút */
+.completeBtn {
+    background: #4CAF50; /* Xanh lá */
+    color: white;
 }
+
+.editBtn {
+    background: #ffc107; /* Vàng */
+    color: white;
+}
+
+.deleteBtn {
+    background: #f44336; /* Đỏ */
+    color: white;
+}
+
+/* 🎀 Hiệu ứng hover */
+.box li .btns button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
 
 /* 🎀 Phần hiển thị danh sách công việc */
 #list {
@@ -173,4 +185,38 @@ h2 {
 #list::-webkit-scrollbar-track {
     background: #f85d99; 
     border-radius: 10px;
+}
+
+/* 🔹 Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffb3d9;  /* Màu hồng nhạt */
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Tên user */
+.username {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* 🔹 Nút Logout */
+.logout-btn {
+    font-size: 1em;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #ff66b2;  /* Màu hồng đậm */
+    color: white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #ff3385;  /* Màu hồng đậm hơn khi hover */
 }

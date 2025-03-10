@@ -1,6 +1,6 @@
 /* 🌸 Nền ngoài */
 body {
-    background-color: #ffffff;  /* Nền ngoài trắng */
+    background-color: #ffffff;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,49 +12,57 @@ body {
 .box {
     position: relative;
     width: 450px;
-    height: 550px;
+    height: auto;
     border-radius: 30px;
-    background: #ffb3d9;  /* Màu hồng nhạt */
-    padding: 30px 50px;
-    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25), 
-    10px 10px 70px rgba(0, 0, 0, 0.25),
-    inset 5px 5px 10px rgba(0, 0, 0, 0.5),
-    inset 5px 5px 20px rgba(255, 255, 255, 0.25),
-    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+    background: #f6cada; 
+    padding: 30px;
+    box-shadow: 25px 25px 75px rgba(251, 14, 164, 0.25), 
+                10px 10px 70px rgba(248, 2, 162, 0.25),
+                inset 5px 5px 10px rgba(79, 1, 41, 0.5),
+                inset 5px 5px 20px rgba(154, 2, 83, 0.25),
+                inset -5px -5px 15px rgba(118, 4, 38, 0.75);
+    text-align: center; /* Căn giữa nội dung */
 }
 
 /* 🎀 Tiêu đề */
 h2 {
-    width: 100%;
     font-weight: 600;
-    text-align: center;
-    color: #ff66b2;  /* Màu hồng đậm */
+    color: #ff66b2;  
     font-size: 1.75em;
     margin-bottom: 20px;
 }
 
 /* 🎀 Label */
 label {
-    width: 100%;
+    display: block;
     font-weight: 600;
-    color: #ff66b2;  /* Màu hồng đậm */
+    color: #ff66b2;  
     font-size: 1.25em;
     margin-bottom: 10px;
+    text-align: left; /* Giữ label căn trái */
 }
 
 /* 🎀 Ô nhập văn bản */
 input[type="text"], textarea {
-    width: 100%;
+    width: calc(100% - 20px); /* Đảm bảo khoảng cách hai bên bằng nhau */
     height: 50px;
     border: none;
     border-radius: 25px;
-    padding: 0 20px;
-    background: #ffe6f2;  /* Màu hồng nhạt */
+    padding: 0 15px;
+    background: #ffe6f2;
     color: #000000;
     font-size: 1.25em;
     margin-bottom: 20px;
+    text-align: center; /* Căn giữa nội dung */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25), 
-    -5px -5px 15px rgba(0, 0, 0, 0.25);
+                -5px -5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* 🎀 Textarea */
+textarea {
+    height: 100px;
+    padding-top: 15px;
+    resize: none;
 }
 
 /* 🎀 Nút submit */
@@ -63,35 +71,30 @@ input[type="submit"] {
     height: 50px;
     border: none;
     border-radius: 25px;
-    background: #ff66b2;  /* Màu hồng đậm */
+    background: #ff66b2;  
     color: #ffffff;
     font-size: 1.25em;
     cursor: pointer;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25), 
-    -5px -5px 15px rgba(0, 0, 0, 0.25),
-    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
-    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+                -5px -5px 15px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* 🎀 Hover và active trên nút submit */
 input[type="submit"]:hover {
-    background: #ff3385; /* Màu hồng đậm hơn khi hover */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25), 
-    -5px -5px 15px rgba(0, 0, 0, 0.25),
-    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
-    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    background: #ff3385;
 }
 
 input[type="submit"]:active {
     box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.25), 
-    inset -5px -5px 15px rgba(0, 0, 0, 0.25);
+                inset -5px -5px 15px rgba(0, 0, 0, 0.25);
 }
 
 /* 🎀 Link */
 a {
-    width: 100%;
     font-weight: 600;
-    color: #ff66b2;  /* Màu hồng đậm */
+    color: #ff66b2;  
     font-size: 1.25em;
     text-align: center;
     margin-top: 20px;

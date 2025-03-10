@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/todo/css/account/register.css' %}">
+  <h2>Đăng ký</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Đăng ký</button>
+  </form>
+  <p>Bạn đã có tài khoản? <a href="{% url 'login' %}">Đăng nhập</a></p>
+{% endblock %}

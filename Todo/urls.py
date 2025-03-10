@@ -7,4 +7,7 @@ urlpatterns = [
     path("edit/<int:pk>/", view=views.edit_task, name="edit_task"),
     path("delete/<int:pk>/", view=views.delete_task, name="delete_task"),
     path("complete/<int:pk>/", view=views.complete_task, name="complete_task"),
+    path("register/", view=views.register, name="register"),
+    path("login/", view=views.login_view, name="login"),
+    path("logout/", view=views.logout_view, name="logout"),
 ]
